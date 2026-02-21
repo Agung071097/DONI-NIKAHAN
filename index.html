@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="light"></div>
+<div class="light"></div>
+<div class="gold-sweep" id="goldSweep"></div>
+
+<div class="opening" id="opening">
+<h1>Wedding Invitation</h1>
+<p>M. Zainul Romadhoni & Siti Maratus</p>
+<button onclick="openInvitation()">Buka Undangan 💌</button>
+</div>
+
+<nav id="navbar">
+<a href="#home">Home</a>
+<a href="#galeri">Galeri</a>
+<a href="#lokasi">Lokasi</a>
+<a href="#rsvp">RSVP</a>
+</nav>
+
+<button class="audio-btn" id="audioBtn" onclick="toggleAudio()">🔊</button>
+
+<section id="home">
+<div class="fade-text arab">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+
+<div class="fade-text arab">
+وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا
+لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً
+</div>
+
+<div class="fade-text arti">
+"Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan..."
+</div>
+
+<h2 class="fade-text">M. Zainul Romadhoni & Siti Maratus</h2>
+<p class="fade-text">20 Desember 2026</p>
+<div id="countdown" class="fade-text"></div>
+</section>
+
+<section id="galeri">
+<h2>Galeri</h2>
+<div class="slideshow">
+<div class="slide active"><img src="doni.jpeg"></div>
+<div class="slide"><img src="doni 1.jpeg"></div>
+<div class="slide"><img src="doni 2.jpeg"></div>
+<div class="slide"><img src="doni 3.jpeg"></div>
+</div>
+</section>
+
+<section id="lokasi">
+<h2>Lokasi Acara</h2>
+<p>Sidodadi, Tempurejo, Jember</p>
+<iframe src="https://www.google.com/maps?q=-8.3612078,113.6859275&output=embed"></iframe>
+</section>
+
+<section id="rsvp">
+<h2>Konfirmasi Kehadiran</h2>
+<form id="rsvpForm">
+<input type="text" id="nama" placeholder="Nama Anda" required><br>
+<select id="kehadiran" required>
+<option value="">Konfirmasi</option>
+<option>Hadir</option>
+<option>Tidak Hadir</option>
+</select><br>
+<button type="submit">Kirim RSVP</button>
+</form>
+<p id="thanks"></p>
+</section>
+
+<audio id="bgm" loop>
+<source src="audio.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>

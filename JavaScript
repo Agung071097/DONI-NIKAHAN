@@ -1,0 +1,25 @@
+function doPost(e) {
+  try {
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    
+    var data = JSON.parse(e.postData.contents);
+    
+    var nama = data.nama || "";
+    var hadir = data.hadir || "";
+    
+    sheet.appendRow([
+      new Date(),
+      nama,
+      hadir
+    ]);
+    
+    return ContentService
+      .createTextOutput(JSON.stringify({status: "success"}))
+      .setMimeType(ContentService.MimeType.JSON);
+      
+  } catch (error) {
+    return ContentService
+      .createTextOutput(JSON.stringify({status: "error", message: error}))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
